@@ -1,5 +1,29 @@
-<h1>Welcome to the app-component</h1>
+<h1>{{ title | lowercase }}</h1>
 
-<hr />
+<h3>Today : {{ today | date : "dd/MM/yyyy" }}</h3>
 
-<app-details></app-details>
+<!-- <h4>Price: {{ price | currency }}</h4>
+
+<span>
+  Selling Price : {{ sellingPrice | currency }}, profit :
+  {{ sellingPrice | profit | currency }}
+
+  <hr />
+
+  <button type="button" [attr.aria-label]="attributeValue">
+    Sample Button
+  </button>
+
+  <hr />
+
+  <p [class]="multipleClasses">This paragraph is to test the sample class</p>
+</span> -->
+
+<!-- <input #color placeholder="type your color" />
+<button (click)="setTextColor(color.value)">Set Color</button>
+
+<p [style.color]="bgColor">This is just a sample color</p> -->
+
+<input [(ngModel)]="fullName" />
+
+<p>{{ fullName }}</p>
